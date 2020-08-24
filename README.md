@@ -23,5 +23,7 @@ func copyPixelBuffer(forItemTime itemTime: CMTime, itemTimeForDisplay outItemTim
 如何获取视频帧，这里都比较简单，都是通过系统层去实现功能。
 主要注意的是：
 1、AVPlayerItemVideoOutput的获取的数据格式定义，根据**需求设置RGBA还是YUV420的数据**。
+
 2、AVPlayer使用seek时候，使用**精度比较高的方法**，提高在seek时候的画面流畅度
+
 3、获取的CVPixelBuffer**在Swift语言，不需要手动释放**。在OC上需要调用手动释放
